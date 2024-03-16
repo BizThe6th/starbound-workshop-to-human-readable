@@ -5,9 +5,8 @@ import java.util.List;
 public abstract class Core {
 	public static void main(String[] args) {
 		//* MEMORY
-		//  Todo: Add path to the dir the jar is in
-		File coreDir = new File("path/to/file");    //  The dir the jar is in
-		List<PakFile> mods = new ArrayList<>();
+		File coreDir = new File(".");           //  The dir the jar is in
+		List<PakFile> mods = new ArrayList<>(); //  A list of the .pak files
 
 		//* WORK
 		assert coreDir.isDirectory();
