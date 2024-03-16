@@ -1,4 +1,6 @@
+import de.marhali.json5.Json5Object;
 import tools.FileHandler;
+import tools.StringHandler;
 
 import java.io.File;
 
@@ -14,9 +16,14 @@ public class Config {
 	String path = "";
 
 	public Config(File configFile) {
-		this(FileHandler.readText(configFile));
+		this(FileHandler.Read.json5(configFile));
 	}
 
 	public Config(String configString) {
+		this(StringHandler.toJson5(configString));
+	}
+
+	public Config(Json5Object configJson5) {
+
 	}
 }
