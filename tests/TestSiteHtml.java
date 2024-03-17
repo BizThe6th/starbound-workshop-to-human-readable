@@ -1,5 +1,3 @@
-package tests;
-
 import tools.SiteHandler;
 
 import java.io.IOException;

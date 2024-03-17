@@ -1,5 +1,3 @@
-package tests;
-
 import de.marhali.json5.Json5Object;
 import tools.FileHandler;
 
