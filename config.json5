@@ -1,0 +1,21 @@
+{
+	/*
+		This is the path to your starbound workshop folder. On windows, examples are:
+
+		- "C:\\Program Files\\Steam\\steamapps\\workshop\\211820"
+		- "C:\\Program Files (x86)\\Steam\\steamapps\\workshop\\211820"
+		- "D:\\SteamLibrary\\steamapps\\workshop\\content\\211820"
+
+		"211820" is Starbound's steam ID.
+		
+		NOTE: use DOUBLE backslashes, or single FOWARDS slashes. DO NOT USE SINGLE BACKSLASHES 
+	*/
+	"workshopPath": "D:\\SteamLibrary\\steamapps\\workshop\\content\\211820",
+
+	/*
+		This is the path you want the .pak files to be moved to.
+
+		NOTE: SLASH RULES STILL APPLY HERE
+	*/
+	"endPath": "D:\\# DFiles\\TestDir"
+}

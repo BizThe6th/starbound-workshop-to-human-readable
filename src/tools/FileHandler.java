@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Objects;
 
 /**
  * <h1>
@@ -28,7 +29,31 @@ public abstract class FileHandler {
 	 *      </p>
 	 *  </h2>
 	 */
+	@SuppressWarnings("unused")
 	public static abstract class Read {
+		public static boolean extensionEquals(File in, String compare) {
+			return compare.equals(fileExtension(in));
+		}
+
+		public static boolean extensionEquals(String in, String compare) {
+			return Objects.equals(compare, fileExtension(in));
+		}
+
+		public static String fileExtension(File in) {
+			if (in.isDirectory()) return null;
+			return fileExtension(in.getName());
+		}
+
+		public static String fileExtension(String in) {
+			int i;
+			for (i = in.length() - 1; i >= 0; i--) {
+				if (in.charAt(i) == ' ') return null;
+				if (in.charAt(i) == '.') break;
+			}
+			if (in.charAt(i) != '.') return null;
+			return in.substring(i + 1);
+		}
+
 		public static String text(File in) {
 			try (FileReader reader = new FileReader(in)) {
 				StringBuilder out = new StringBuilder();
@@ -42,6 +67,10 @@ public abstract class FileHandler {
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
+		}
+
+		public static Json5Object json5(String filePath) {
+			return json5(new File(filePath));
 		}
 
 		public static Json5Object json5(File in) {
@@ -61,6 +90,7 @@ public abstract class FileHandler {
 	 *      </p>
 	 *  </h2>
 	 */
+	@SuppressWarnings("unused")
 	public static abstract class Write {
 		public static void json5(File file, Json5Element in) {
 			json5(file.getPath(), in);

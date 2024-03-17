@@ -7,14 +7,14 @@ import java.io.File;
 
 public abstract class TestFileReading {
 	public static void main(String[] args){
-		File file = new File("./boo.json5");
+		File file = new File("./config.json5");
 		String string = FileHandler.Read.text(file);
 		Json5Object json5Object = FileHandler.Read.json5(file);
 
 
-		//System.out.println(string);
-		System.out.println(json5Object.get("foo"));
-		System.out.println(json5Object.get("si"));
-		System.out.println(json5Object.get("fact"));
+		System.out.println(string);
+		System.out.println("\n".repeat(99));
+		System.out.println(json5Object.get("workshopPath").getAsString());
+		System.out.println(json5Object.get("endPath").getAsString());
 	}
 }

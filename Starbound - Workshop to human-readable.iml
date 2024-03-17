@@ -9,5 +9,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="de.marhali.json5.java" level="application" />
+    <orderEntry type="library" name="jsoup" level="application" />
   </component>
 </module>
