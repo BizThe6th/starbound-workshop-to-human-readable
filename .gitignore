@@ -27,3 +27,5 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+/resources/openjdk-21.0.2/
+/assets/
