@@ -1,4 +1,5 @@
-# Starbound - Workshop to Human-Readable
+# Starbound Workshop Auto-rename With a Scraper on html
+## (SWAWS)
 
 ## Credits:
 
